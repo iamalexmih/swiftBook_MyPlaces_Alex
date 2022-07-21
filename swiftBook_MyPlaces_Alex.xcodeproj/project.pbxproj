@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FD5B03EB1E51231B8E7EC0A /* Pods_swiftBook_MyPlaces_Alex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8FC2E25D6491188FAB47A8 /* Pods_swiftBook_MyPlaces_Alex.framework */; };
+		B545B26C2880609F00DE15FC /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545B26B2880609F00DE15FC /* RatingControl.swift */; };
+		B545B28028834C1100DE15FC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B545B27F28834C1100DE15FC /* MapViewController.swift */; };
+		B551AC8B287D8EDE0065C6B1 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B551AC8A287D8EDE0065C6B1 /* StorageManager.swift */; };
+		B5A9E64D2879C94D00A85E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9E64C2879C94D00A85E71 /* AppDelegate.swift */; };
+		B5A9E64F2879C94D00A85E71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9E64E2879C94D00A85E71 /* SceneDelegate.swift */; };
+		B5A9E6542879C94D00A85E71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A9E6522879C94D00A85E71 /* Main.storyboard */; };
+		B5A9E6562879C94F00A85E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5A9E6552879C94F00A85E71 /* Assets.xcassets */; };
+		B5A9E6592879C94F00A85E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5A9E6572879C94F00A85E71 /* LaunchScreen.storyboard */; };
+		B5A9E661287B033B00A85E71 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9E660287B033B00A85E71 /* MainTableViewController.swift */; };
+		B5A9E663287B303A00A85E71 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9E662287B303A00A85E71 /* CustomCell.swift */; };
+		B5A9E667287C094A00A85E71 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9E666287C094A00A85E71 /* PlaceModel.swift */; };
+		B5A9E66B287C0F9000A85E71 /* NewPlacesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9E66A287C0F9000A85E71 /* NewPlacesController.swift */; };
+		B5C40AC52885A34400991424 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C40AC42885A34400991424 /* MapManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01C5A3AE84B0D7F96BA17974 /* Pods-swiftBook_MyPlaces_Alex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftBook_MyPlaces_Alex.release.xcconfig"; path = "Target Support Files/Pods-swiftBook_MyPlaces_Alex/Pods-swiftBook_MyPlaces_Alex.release.xcconfig"; sourceTree = "<group>"; };
+		4F8FC2E25D6491188FAB47A8 /* Pods_swiftBook_MyPlaces_Alex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftBook_MyPlaces_Alex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82CAB3DFFC70537145062003 /* Pods-swiftBook_MyPlaces_Alex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftBook_MyPlaces_Alex.debug.xcconfig"; path = "Target Support Files/Pods-swiftBook_MyPlaces_Alex/Pods-swiftBook_MyPlaces_Alex.debug.xcconfig"; sourceTree = "<group>"; };
+		B545B26B2880609F00DE15FC /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		B545B27F28834C1100DE15FC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B551AC8A287D8EDE0065C6B1 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		B5A9E6492879C94D00A85E71 /* swiftBook_MyPlaces_Alex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftBook_MyPlaces_Alex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5A9E64C2879C94D00A85E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5A9E64E2879C94D00A85E71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B5A9E6532879C94D00A85E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5A9E6552879C94F00A85E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5A9E6582879C94F00A85E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5A9E65A2879C94F00A85E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5A9E660287B033B00A85E71 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		B5A9E662287B303A00A85E71 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		B5A9E666287C094A00A85E71 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		B5A9E66A287C0F9000A85E71 /* NewPlacesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlacesController.swift; sourceTree = "<group>"; };
+		B5C40AC42885A34400991424 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5A9E6462879C94D00A85E71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FD5B03EB1E51231B8E7EC0A /* Pods_swiftBook_MyPlaces_Alex.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02E1B414ED821DDE16F50345 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F8FC2E25D6491188FAB47A8 /* Pods_swiftBook_MyPlaces_Alex.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5275B752886AA4C0064CF5F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B545B26B2880609F00DE15FC /* RatingControl.swift */,
+				B5C40AC42885A34400991424 /* MapManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B545B2702880734200DE15FC /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				B5A9E6552879C94F00A85E71 /* Assets.xcassets */,
+				B5A9E65A2879C94F00A85E71 /* Info.plist */,
+				B5A9E6572879C94F00A85E71 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		B545B2712880739C00DE15FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5A9E6522879C94D00A85E71 /* Main.storyboard */,
+				B5A9E662287B303A00A85E71 /* CustomCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B545B273288073A800DE15FC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B5A9E64C2879C94D00A85E71 /* AppDelegate.swift */,
+				B5A9E64E2879C94D00A85E71 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B545B274288073C800DE15FC /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				B551AC8A287D8EDE0065C6B1 /* StorageManager.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		B545B275288073EC00DE15FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B545B27F28834C1100DE15FC /* MapViewController.swift */,
+				B5A9E660287B033B00A85E71 /* MainTableViewController.swift */,
+				B5A9E66A287C0F9000A85E71 /* NewPlacesController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B545B2762880741700DE15FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5A9E666287C094A00A85E71 /* PlaceModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5A9E6402879C94D00A85E71 = {
+			isa = PBXGroup;
+			children = (
+				B5A9E64B2879C94D00A85E71 /* swiftBook_MyPlaces_Alex */,
+				B5A9E64A2879C94D00A85E71 /* Products */,
+				B6433B453CFDC11D87E00C59 /* Pods */,
+				02E1B414ED821DDE16F50345 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B5A9E64A2879C94D00A85E71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5A9E6492879C94D00A85E71 /* swiftBook_MyPlaces_Alex.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5A9E64B2879C94D00A85E71 /* swiftBook_MyPlaces_Alex */ = {
+			isa = PBXGroup;
+			children = (
+				B545B275288073EC00DE15FC /* Controller */,
+				B5275B752886AA4C0064CF5F /* Helpers */,
+				B545B2762880741700DE15FC /* Model */,
+				B545B2712880739C00DE15FC /* View */,
+				B545B274288073C800DE15FC /* Storage */,
+				B545B2702880734200DE15FC /* SupportingFiles */,
+				B545B273288073A800DE15FC /* Application */,
+			);
+			path = swiftBook_MyPlaces_Alex;
+			sourceTree = "<group>";
+		};
+		B6433B453CFDC11D87E00C59 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82CAB3DFFC70537145062003 /* Pods-swiftBook_MyPlaces_Alex.debug.xcconfig */,
+				01C5A3AE84B0D7F96BA17974 /* Pods-swiftBook_MyPlaces_Alex.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5A9E6482879C94D00A85E71 /* swiftBook_MyPlaces_Alex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5A9E65D2879C94F00A85E71 /* Build configuration list for PBXNativeTarget "swiftBook_MyPlaces_Alex" */;
+			buildPhases = (
+				95CAECCE89EAAFB25661F2D8 /* [CP] Check Pods Manifest.lock */,
+				B5A9E6452879C94D00A85E71 /* Sources */,
+				B5A9E6462879C94D00A85E71 /* Frameworks */,
+				B5A9E6472879C94D00A85E71 /* Resources */,
+				3330825B18FCE7A917D47455 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = swiftBook_MyPlaces_Alex;
+			productName = swiftBook_MyPlaces_Alex;
+			productReference = B5A9E6492879C94D00A85E71 /* swiftBook_MyPlaces_Alex.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5A9E6412879C94D00A85E71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					B5A9E6482879C94D00A85E71 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = B5A9E6442879C94D00A85E71 /* Build configuration list for PBXProject "swiftBook_MyPlaces_Alex" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5A9E6402879C94D00A85E71;
+			productRefGroup = B5A9E64A2879C94D00A85E71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5A9E6482879C94D00A85E71 /* swiftBook_MyPlaces_Alex */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5A9E6472879C94D00A85E71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5A9E6592879C94F00A85E71 /* LaunchScreen.storyboard in Resources */,
+				B5A9E6562879C94F00A85E71 /* Assets.xcassets in Resources */,
+				B5A9E6542879C94D00A85E71 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3330825B18FCE7A917D47455 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swiftBook_MyPlaces_Alex/Pods-swiftBook_MyPlaces_Alex-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-swiftBook_MyPlaces_Alex/Pods-swiftBook_MyPlaces_Alex-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swiftBook_MyPlaces_Alex/Pods-swiftBook_MyPlaces_Alex-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95CAECCE89EAAFB25661F2D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-swiftBook_MyPlaces_Alex-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5A9E6452879C94D00A85E71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5A9E64D2879C94D00A85E71 /* AppDelegate.swift in Sources */,
+				B5A9E661287B033B00A85E71 /* MainTableViewController.swift in Sources */,
+				B5A9E66B287C0F9000A85E71 /* NewPlacesController.swift in Sources */,
+				B551AC8B287D8EDE0065C6B1 /* StorageManager.swift in Sources */,
+				B545B28028834C1100DE15FC /* MapViewController.swift in Sources */,
+				B545B26C2880609F00DE15FC /* RatingControl.swift in Sources */,
+				B5C40AC52885A34400991424 /* MapManager.swift in Sources */,
+				B5A9E667287C094A00A85E71 /* PlaceModel.swift in Sources */,
+				B5A9E663287B303A00A85E71 /* CustomCell.swift in Sources */,
+				B5A9E64F2879C94D00A85E71 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B5A9E6522879C94D00A85E71 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5A9E6532879C94D00A85E71 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B5A9E6572879C94F00A85E71 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5A9E6582879C94F00A85E71 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5A9E65B2879C94F00A85E71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B5A9E65C2879C94F00A85E71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5A9E65E2879C94F00A85E71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82CAB3DFFC70537145062003 /* Pods-swiftBook_MyPlaces_Alex.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7F2F462T64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = swiftBook_MyPlaces_Alex/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "alexey.poprotskii.swiftBook-MyPlaces-Alex";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5A9E65F2879C94F00A85E71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01C5A3AE84B0D7F96BA17974 /* Pods-swiftBook_MyPlaces_Alex.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7F2F462T64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = swiftBook_MyPlaces_Alex/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "alexey.poprotskii.swiftBook-MyPlaces-Alex";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5A9E6442879C94D00A85E71 /* Build configuration list for PBXProject "swiftBook_MyPlaces_Alex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5A9E65B2879C94F00A85E71 /* Debug */,
+				B5A9E65C2879C94F00A85E71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5A9E65D2879C94F00A85E71 /* Build configuration list for PBXNativeTarget "swiftBook_MyPlaces_Alex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5A9E65E2879C94F00A85E71 /* Debug */,
+				B5A9E65F2879C94F00A85E71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5A9E6412879C94D00A85E71 /* Project object */;
+}
