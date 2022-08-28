@@ -91,6 +91,7 @@ class NewPlacesController: UITableViewController {
             view.endEditing(true)
         }
     }
+    
 // MARK: - save Place
     func savePlace() {
         
@@ -134,10 +135,7 @@ class NewPlacesController: UITableViewController {
             mapVC.place.type = textFieldType.text
             mapVC.place.imageData = imageNewPlace.image?.pngData()
         }
-
     }
-    
-    
 }
 
 
@@ -192,5 +190,4 @@ extension NewPlacesController: MapToNewViewControllerDelegate {
     func getAddress(_ address: String?) {
         textFieldLocation.text = address
     }
-
 }

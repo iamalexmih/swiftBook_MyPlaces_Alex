@@ -327,7 +327,7 @@
                         <outlet property="addressLabel" destination="eqR-UW-WIP" id="4wN-uE-yC4"/>
                         <outlet property="doneButton" destination="F47-xU-Rbn" id="biY-gI-oaw"/>
                         <outlet property="goButton" destination="S0O-dq-jrw" id="fZa-NH-6fK"/>
-                        <outlet property="mapPinImage" destination="TKw-c0-cnB" id="5Bb-Ph-GK5"/>
+                        <outlet property="mapCenterPinBlackImage" destination="TKw-c0-cnB" id="5Bb-Ph-GK5"/>
                         <outlet property="mapView" destination="YrK-Mq-dk9" id="Pwa-uJ-aaN"/>
                     </connections>
                 </viewController>

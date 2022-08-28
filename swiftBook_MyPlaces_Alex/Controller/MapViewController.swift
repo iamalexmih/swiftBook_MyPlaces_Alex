@@ -36,7 +36,7 @@ class MapViewController: UIViewController {
     }
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var mapPinImage: UIImageView!
+    @IBOutlet weak var mapCenterPinBlackImage: UIImageView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var goButton: UIButton!
@@ -44,7 +44,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addressLabel.text = ""
+        addressLabel.text = "загрузка адреса"
         mapView.delegate = self
         setupMapView()
     }
@@ -69,7 +69,6 @@ class MapViewController: UIViewController {
     }
     
     private func setupMapView() {
-        mapManager.centerLocation(mapManager.initLocationGelendzhik, regionRadius: 3000, mapView: mapView)
         goButton.isHidden = true
         
         mapManager.checkLocationServices(mapView: mapView, segueIdentifier: incomeSegueIdentifier) {
@@ -78,13 +77,12 @@ class MapViewController: UIViewController {
         
         if incomeSegueIdentifier == "showPlaceMap" {
             mapManager.setupPlacemark(place: place, mapView: mapView)
-            mapPinImage.isHidden = true
+            mapCenterPinBlackImage.isHidden = true
             addressLabel.isHidden = true
             doneButton.isHidden = true
             goButton.isHidden = false
         }
     }
-    
 }
 
 //Расширение клааса позволяющее кастоматизировать банер точки локации
@@ -112,7 +110,7 @@ extension MapViewController: MKMapViewDelegate {
         return annotationView
     }
     
-    //метод будет вызываться каждый раз при смене отображаемого на экране региона, и каждый раз мы будем отображать адрес который находиться в центре текущего региона.
+    // MARK: - отображение в центре карты Адреса на который указывает маркер.
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         
         let center = mapManager.getCenterLocation(for: mapView)
@@ -149,7 +147,6 @@ extension MapViewController: MKMapViewDelegate {
                     self.addressLabel.text = ""
                 }
             }
-            
         }
     }
     
