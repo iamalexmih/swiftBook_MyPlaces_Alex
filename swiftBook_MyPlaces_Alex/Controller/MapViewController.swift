@@ -13,8 +13,9 @@ protocol MapToNewViewControllerDelegate {
     func getAddress(_ address: String?)
 }
 
-class MapViewController: UIViewController {
 
+class MapViewController: UIViewController {
+    
     let mapManager = MapManager()
     var mapToNewViewControllerDelegate: MapToNewViewControllerDelegate? // Delegate
     var place = Place()
@@ -47,7 +48,7 @@ class MapViewController: UIViewController {
         mapView.delegate = self
         setupMapView()
     }
-    
+
     @IBAction func closeMap() {
         dismiss(animated: true, completion: nil)
     }
@@ -68,6 +69,7 @@ class MapViewController: UIViewController {
     }
     
     private func setupMapView() {
+        mapManager.centerLocation(mapManager.initLocationGelendzhik, regionRadius: 3000, mapView: mapView)
         goButton.isHidden = true
         
         mapManager.checkLocationServices(mapView: mapView, segueIdentifier: incomeSegueIdentifier) {
@@ -89,7 +91,7 @@ class MapViewController: UIViewController {
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        guard !(annotation is MKUserLocation) else { return nil} // Проверяем что annotation не является аннотацией определяющей текущее местоположение юзера.
+        guard !(annotation is MKUserLocation) else { return nil } // Проверяем что annotation не является аннотацией определяющей текущее местоположение юзера.
         
         // Прежде чем создавать новый объект annotationView, надо проверить его на переиспользование dequeueReusableAnnotationView.
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) as? MKPinAnnotationView
@@ -134,12 +136,13 @@ extension MapViewController: MKMapViewDelegate {
             guard let placemarks = placemarks else { return }
             
             let placemark = placemarks.first
+            let city = placemark?.locality
             let streetName = placemark?.thoroughfare
-            let buildNamber = placemark?.subLocality
+            let buildNumber = placemark?.subThoroughfare
             
             DispatchQueue.main.async {
-                if streetName != nil && buildNamber != nil {
-                    self.addressLabel.text = "\(streetName!), \(buildNamber!)"
+                if streetName != nil && buildNumber != nil && city != nil {
+                    self.addressLabel.text = "\(city!), \(streetName!), \(buildNumber!)"
                 } else if streetName != nil {
                     self.addressLabel.text = "\(streetName!)"
                 } else {
@@ -153,13 +156,14 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay as! MKPolyline)
         renderer.strokeColor = .blue
+        renderer.lineWidth = 4
         return renderer
     }
 }
 
 // didChangeAuthorization устаревший метод, за место него locationManagerDidChangeAuthorization(_:)
 extension MapViewController: CLLocationManagerDelegate {
-//    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-//        checkLocationAuthorization()
-//    }
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        // checkLocationAuthorization()
+    }
 }

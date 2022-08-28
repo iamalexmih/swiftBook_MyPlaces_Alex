@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cnS-Pw-Q9l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cnS-Pw-Q9l">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -97,16 +97,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="YIb-um-APW">
-                                                    <rect key="frame" x="16" y="8" width="348" height="63"/>
+                                                    <rect key="frame" x="16" y="8" width="352" height="63"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLH-I5-loA">
-                                                            <rect key="frame" x="0.0" y="0.0" width="348" height="35.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="352" height="41"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" placeholder="Place location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPe-Yq-xVR">
-                                                            <rect key="frame" x="0.0" y="35.5" width="348" height="27.5"/>
+                                                            <rect key="frame" x="0.0" y="41" width="352" height="22"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                             <connections>
@@ -116,7 +116,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaD-Ab-xub">
-                                                    <rect key="frame" x="372" y="46.5" width="22" height="22"/>
+                                                    <rect key="frame" x="376" y="49" width="22" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="22" id="mTh-tM-dGG"/>
                                                         <constraint firstAttribute="height" constant="22" id="zF5-g5-krk"/>
@@ -129,9 +129,10 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="XaD-Ab-xub" firstAttribute="trailing" secondItem="QpC-A4-a2e" secondAttribute="trailingMargin" id="2A6-JH-wdg"/>
                                                 <constraint firstItem="XaD-Ab-xub" firstAttribute="centerY" secondItem="hPe-Yq-xVR" secondAttribute="centerY" id="BVr-M3-Bjl"/>
+                                                <constraint firstAttribute="trailing" secondItem="XaD-Ab-xub" secondAttribute="trailing" constant="16" id="FfX-ps-oyE"/>
                                                 <constraint firstAttribute="bottom" secondItem="YIb-um-APW" secondAttribute="bottom" constant="4" id="S55-uO-ZaV"/>
+                                                <constraint firstAttribute="bottom" secondItem="XaD-Ab-xub" secondAttribute="bottom" constant="4" id="TvC-P3-cxw"/>
                                                 <constraint firstItem="YIb-um-APW" firstAttribute="leading" secondItem="QpC-A4-a2e" secondAttribute="leading" constant="16" id="au5-VN-IKC"/>
                                                 <constraint firstItem="YIb-um-APW" firstAttribute="top" secondItem="QpC-A4-a2e" secondAttribute="top" constant="8" id="fNh-60-TQB"/>
                                                 <constraint firstItem="XaD-Ab-xub" firstAttribute="leading" secondItem="YIb-um-APW" secondAttribute="trailing" constant="8" id="mTn-2c-fda"/>
@@ -541,7 +542,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="avI-kr-zVN"/>
+        <segue reference="M96-uQ-P95"/>
         <segue reference="Vdl-wj-tEL"/>
     </inferredMetricsTieBreakers>
     <resources>

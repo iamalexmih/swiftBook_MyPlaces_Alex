@@ -91,10 +91,10 @@ class NewPlacesController: UITableViewController {
             view.endEditing(true)
         }
     }
-    
+// MARK: - save Place
     func savePlace() {
         
-        let image = imageIsChanged ? imageNewPlace.image : #imageLiteral(resourceName: "imagePlaceholder") //если изображение не было добавленно пользователем, то отоб картина по умолчанию.
+        let image = imageIsChanged ? imageNewPlace.image : #imageLiteral(resourceName: "imagePlaceholder") //если изображение не было добавленно пользователем, то отобразить картина по умолчанию.
         let imageData = image?.pngData()
         
         let newPlace = Place(name: textFieldName.text!,
@@ -117,7 +117,7 @@ class NewPlacesController: UITableViewController {
         }
     }
     
-    //MARK: - Navigate Segue
+//MARK: - Navigate Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

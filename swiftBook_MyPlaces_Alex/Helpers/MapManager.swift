@@ -12,11 +12,16 @@ class MapManager {
     
     let locationManager = CLLocationManager()
     
-    private let regionInMeters = 10_000.00
+    let initLocationGelendzhik = CLLocation(latitude: 44.56112, longitude: 38.07644)
+    
+    
+
+    
+    private let regionInMeters = 500.00
     private var placeCoordinate: CLLocationCoordinate2D? //хранение координат
     private var directionsArray: [MKDirections] = []
     
-    // Маркер Заведения
+    // MARK: - Annotation, Маркер Заведения
     func setupPlacemark(place: Place, mapView: MKMapView) {
         guard let location = place.location else { return }
         
@@ -41,13 +46,13 @@ class MapManager {
             annotation.coordinate = placemarkLocation.coordinate
             self.placeCoordinate = placemarkLocation.coordinate
             
-            mapView.showAnnotations([annotation], animated: true) //показать область карту, чтоб на ней были видны все созданные аннотации. массив аннотаций [annotation].
+            mapView.showAnnotations([annotation], animated: true) //показать область карты, чтоб на ней были видны все созданные аннотации. массив аннотаций [annotation].
             mapView.selectAnnotation(annotation, animated: true) //чтобы выделить созданную аннотацию, Значок метки становиться больше, чем у всех остальных меток.
             
         }
     }
     
-    // Проверка доступности сервисов геолокации
+    //MARK: - Проверка доступности сервисов геолокации
     func checkLocationServices(mapView: MKMapView, segueIdentifier: String, closure: () -> ()) {
         
         if CLLocationManager.locationServicesEnabled() {
@@ -56,12 +61,12 @@ class MapManager {
             closure()
         } else { //Если службы геолокации выключены, то вызвать Алерт контроллер с инструкциями, как их включить.
             DispatchQueue.main.asyncAfter(deadline: .now()+1) {
-                self.showAlert(title: "Ваша локация не определена", message: "Зайдите в настройки setting -> MyPlaces -> Location")
+                self.showAlert(title: "Ваша локация не определена", message: "Зайдите в настройки setting -> Privacy -> Location Services and turn On")
             }
         }
     }
     
-    // Проверка авторизации приложения для исп сервисов геолок
+    //MARK: - Проверка авторизации приложения для исп сервисов геолок
     func checkLocationAuthorization(mapView: MKMapView, segueIdentifier: String) {//Обработка разных вариантов Ауторизации пользователя.
         switch locationManager.authorizationStatus { // authorizationStatus имеет пять состояний, надо их всех проверить.
             case .authorizedWhenInUse:
@@ -71,7 +76,7 @@ class MapManager {
                 }
                 break
             case .denied:
-                DispatchQueue.main.asyncAfter(deadline: .now()+1) { //задержка +1 секунда
+                DispatchQueue.main.asyncAfter(deadline: .now()+1) {
                     self.showAlert(title: "Ваша локация не определена", message: "Зайдите в настройки setting -> MyPlaces -> Location")
                 }
                 break
@@ -87,7 +92,7 @@ class MapManager {
         }
     }
     
-    // Фокусирование камеры на местоположении пользователя
+    //MARK: - Фокусирование камеры на местоположении пользователя
     func showUserLocation(mapView: MKMapView) {
         if let location = locationManager.location?.coordinate { //если получается определить координаты пользователя
             let region = MKCoordinateRegion(center: location,
@@ -97,7 +102,7 @@ class MapManager {
         }
     }
     
-    // Построение маршрута юзер - место
+    // MARK: - Построение маршрута юзер - место
     func getDirections(for mapView: MKMapView, previousLocation: (CLLocation) -> ()) {
         
         guard let location = locationManager.location?.coordinate else {
@@ -139,7 +144,7 @@ class MapManager {
             
         }
     }
-    // Настройка запроса для расчета маршрута
+    // MARK: -  Настройка запроса для расчета маршрута
     func createDirectionRequest(from coordinate: CLLocationCoordinate2D) -> MKDirections.Request? {
         guard let destinationCoordinate = placeCoordinate else { return nil }
         let startingLocation = MKPlacemark(coordinate: coordinate)
@@ -148,13 +153,13 @@ class MapManager {
         let request = MKDirections.Request()
         request.source = MKMapItem(placemark: startingLocation)
         request.destination = MKMapItem(placemark: destination)
-        request.transportType = .automobile
+        request.transportType = .walking
         request.requestsAlternateRoutes = true
         
         return request
     }
     
-    //  Меняем отображаемую зону области карты в соответствии с перемещением пользователя
+    // MARK: -  Меняем отображаемую зону области карты в соответствии с перемещением пользователя
     func startTrackingUserLocation(for mapView: MKMapView, and location: CLLocation?, closure: (_ currentLocation: CLLocation) -> ()) {
         guard let location = location else { return }
         let center = getCenterLocation(for: mapView)
@@ -162,7 +167,7 @@ class MapManager {
         
         closure(center)
     }
-    // сброс всех ранее построенных маршрутов перед построением нового
+    // MARK: - сброс всех ранее построенных маршрутов перед построением нового
     func resetMapView(withNew directions: MKDirections, mapView: MKMapView) {
         mapView.removeOverlays(mapView.overlays)
         directionsArray.append(directions)
@@ -170,7 +175,7 @@ class MapManager {
         directionsArray.removeAll()
     }
     
-    // Определение центра отображаемой области карты
+    // MARK: - Определение центра отображаемой области карты
     // метод возращает координаты точки, находящейся по центру экрана
     func getCenterLocation(for mapView: MKMapView) -> CLLocation {
         
@@ -180,6 +185,7 @@ class MapManager {
         return CLLocation(latitude: latitude, longitude: longitude)
     }
     
+    // MARK: - Alert Controller
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -192,6 +198,13 @@ class MapManager {
         alertWindow.makeKeyAndVisible()
         alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
         
+    }
+    
+    // MARK: - Центрирование карты при запуске mapView на заданном городе
+    
+    func centerLocation(_ location: CLLocation, regionRadius: CLLocationDistance, mapView: MKMapView) {
+        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
     
 }
